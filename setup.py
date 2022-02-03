@@ -14,7 +14,8 @@ setup(
     scripts=['bin/ghnotifier'],
     install_requires=[
         'configparser',
-        'requests'
+        'requests',
+        'pygobject'
     ],
     zip_safe=False,
     include_package_data=True
