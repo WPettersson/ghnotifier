@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
 
+from importlib.resources import files
+
 import gi
 
-gi.require_version('AppIndicator3', '0.1')
+gi.require_version('AyatanaAppIndicator3', '0.1')
 
-from gi.repository import AppIndicator3, GObject
+from gi.repository import AyatanaAppIndicator3 as appindicator, GObject
 from ghnotifier.config import Config
 
 
 class Indicator:
 
     INDICATOR_ID = 'Github Notifier'
+    ICON_PATH = files("ghnotifier").joinpath("gh.png")
 
     def __init__(self):
-        self.indicator = AppIndicator3.Indicator.new(
+        self.indicator = appindicator.Indicator.new(
             self.INDICATOR_ID,
-            Config.APP_PATH + "/gh.png",
-            AppIndicator3.IndicatorCategory.APPLICATION_STATUS
+            str(self.ICON_PATH),
+            appindicator.IndicatorCategory.APPLICATION_STATUS
         )
-
-        self.indicator.set_status(AppIndicator3.IndicatorStatus.ACTIVE)
+        self.indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
         self.indicator.set_label("0", '')
 
     def set_menu(self, menu):

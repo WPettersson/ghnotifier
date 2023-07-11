@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+ghnotifier/ghnotifier.egg-info/PKG-INFO
+ghnotifier/ghnotifier.egg-info/SOURCES.txt
+ghnotifier/ghnotifier.egg-info/dependency_links.txt
+ghnotifier/ghnotifier.egg-info/entry_points.txt
+ghnotifier/ghnotifier.egg-info/requires.txt
+ghnotifier/ghnotifier.egg-info/top_level.txt

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ghnotifier
+Version: 0.2.0
+Summary: Github notifications
+Author-email: William Pettesson <william@ewpettersson.se>, Marko Kunic <kunicmarko20@gmail.com>
+Maintainer-email: William Pettesson <william@ewpettersson.se>
+Project-URL: Repository, https://github.com/wpettersson/ghnotifier
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+This is a fork from https://github.com/kunicmarko20/ghnotifier
+
+This Python app will show you number of notifications in your status bar and
+send you github notifications to your Linux notifications.
+
+# Dependencies:
+
+If you are having trouble with dependencies, try following this [guide](https://pygobject.readthedocs.io/en/latest/getting_started.html).
+

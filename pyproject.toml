@@ -1,0 +1,32 @@
+[project]
+name = "ghnotifier"
+version = "0.2.0"
+readme = "README.md"
+requires-python = ">=3.9"
+description = "Github notifications"
+authors = [
+  {name = "William Pettesson", email = "william@ewpettersson.se"},
+  {name = "Marko Kunic", email = "kunicmarko20@gmail.com"},
+]
+license = {file = "LICENSE.txt"}
+maintainers = [
+  {name = "William Pettesson", email = "william@ewpettersson.se"},
+]
+dependencies = [
+  "configparser",
+  "requests",
+  "pygobject",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+]
+
+[project.urls]
+Repository = "https://github.com/wpettersson/ghnotifier"
+
+[project.entry-points.ghnotifier]
+ghnotifier = "ghnotifier:run_gui"
+
+[tool.setuptools.package-data]
+ghnotifier = ["gh.png"]

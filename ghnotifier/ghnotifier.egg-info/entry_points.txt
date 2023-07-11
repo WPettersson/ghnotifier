@@ -1,0 +1,2 @@
+[ghnotifier]
+ghnotifier = ghnotifier:run_gui

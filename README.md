@@ -1,8 +1,10 @@
-If you want to use this check my [Rust Port](https://github.com/kunicmarko20/ghnotifier-rs) instead.
 
-Python app that will show you number of notifications in your status bar and
+This is a fork from https://github.com/kunicmarko20/ghnotifier
+
+This Python app will show you number of notifications in your status bar and
 send you github notifications to your Linux notifications.
 
 # Dependencies:
 
-Install `pygobject` in your system by following this [guide](https://pygobject.readthedocs.io/en/latest/getting_started.html).
+If you are having trouble with dependencies, try following this [guide](https://pygobject.readthedocs.io/en/latest/getting_started.html).
+
