@@ -8,6 +8,7 @@ gi.require_version('Notify', '0.7')
 
 from gi.repository import GLib, Notify
 from ghnotifier.config import Config
+from ghnotifier.indicator import IndicatorStatus
 
 
 class Notifier:
@@ -32,10 +33,12 @@ class Notifier:
             return
 
         notifications = self.get_notifications()
-
-        if notifications is None:
+        self.indicator.update_label(str(len(notifications)))
+        if notifications is None or len(notifications) == 0:
+            self.indicator.set_status(IndicatorStatus.ACTIVE)
             return
 
+        self.indicator.set_status(IndicatorStatus.ATTENTION)
         for notification in notifications:
             if not self.is_notified(notification['id']):
                 Notify.Notification.new(
@@ -43,7 +46,6 @@ class Notifier:
                 ).show()
                 self.notified.append(notification['id'])
 
-        self.indicator.update_label(str(len(notifications)))
 
     def get_notifications(self):
         response = requests.get(
